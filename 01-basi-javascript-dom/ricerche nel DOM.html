@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript basi</title>
+
+</head>
+
+<body>
+    <div id="rosso">testo <strong>contenuto</strong></div>
+
+    <ul>
+        <li id="primo" class="dispari">uno</li>
+        <li class="pari">due</li>
+        <li class="dispari">tre</li>
+        <li class="pari">quattro</li>
+        <li class="dispari">cinque</li>
+    </ul>
+
+    <ul id="seconda-lista">
+        <li id="primo" class="dispari">uno</li>
+        <li class="pari">due</li>
+        <li class="dispari">tre</li>
+        <li class="pari">quattro</li>
+        <li class="dispari">
+            cinque
+
+            <p class="pari">paragrafo pari</p>
+        </li>
+    </ul>
+
+
+
+    <script>
+        var nome = "roberto";
+        var frase = "il nome è " + nome;
+        //    frase = 'il nome è ' + nome;
+
+        var rosso = document.getElementById("rosso");
+        console.log("rosso ?", rosso);
+
+        // innerHTML proprietà che rappresenta il contenuto dell' elemento
+        console.log("inner HTML", rosso.innerHTML);
+        rosso.innerHTML = "nuovo testo";
+
+        // D.O.M. strumenti per trovare  elementi nella pagina
+
+        document.getElementById("primo");
+        document.getElementsByClassName("pari");
+        document.getElementsByTagName("ul");
+
+        document.querySelectorAll("#primo");
+        document.querySelectorAll(".pari");
+        document.querySelectorAll("ul");
+
+        document.querySelectorAll("#seconda-lista .pari");
+
+
+
+
+
+        console.log("frase: ", frase);
+
+    </script>
+
+
+</body>
+
+</html>
