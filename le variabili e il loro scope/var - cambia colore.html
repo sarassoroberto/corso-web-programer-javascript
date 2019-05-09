@@ -25,41 +25,41 @@
         .red {
             background-color: red;
         }
-
-        .blue {
-            background-color: rgb(0, 119, 255);
-        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>Utilizzo di var</h1>
-        <h2>Cambia colore</p>
-            <p>Di che colore è la palla ?</p>
+        <h1>Lo scope in JS</h1>
+        <h2>Var e function scope</h2>
+        <p>Di che colore è la palla ?</p>
 
-            <div class="campo">
-                <div class="palla">
+        <p>
+            la variabile colore palla utilizza il: <br> <strong>function scope globale</strong>
+        </p>
+        <div class="campo">
+            <div class="palla">
 
-                </div>
             </div>
-            <blockquote>
-                function scope globale
-            </blockquote>
-            <script>
-                // function scope globale
-                var colorePalla = "red";
+        </div>
 
-                function cambiaColore() {
-                    colorePalla = "blue";
-                    console.log("cambio il colore.");
-                }
+        <script>
+            // function scope globale
+            var pallaHtmlElement = document.getElementsByClassName('palla')[0];
 
-                // provo lo script
-                console.log("il colore della palla è", colorePalla);
-                cambiaColore();
-                console.log("il colore della palla è", colorePalla);
-            </script>
+            var colorePalla = "";
+
+            function cambiaColore() {
+                colorePalla = "red";
+                pallaHtmlElement.className = "palla red";
+                console.log("cambio il colore.");
+            }
+
+            // provo lo script
+            console.log("il colore della palla è: ", colorePalla);
+            cambiaColore();
+            console.log("il colore della palla è: ", colorePalla);
+        </script>
     </div>
 </body>
 
