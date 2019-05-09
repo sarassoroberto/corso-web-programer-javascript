@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Var</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .campo {
+            background-color: #f1f1f1;
+            padding: 1rem;
+            border: 1px solid #bfbfbf;
+        }
+
+        .palla {
+            width: 100px;
+            height: 100px;
+            border: 2px dashed #a2a2a2;
+            border-radius: 50%;
+            background-color: #e8e8e8;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: rgb(0, 119, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Utilizzo di var</h1>
+        <p>Di che colore è la palla ?</p>
+
+        <div class="campo">
+            <div class="palla">
+
+            </div>
+        </div>
+
+        <script>
+            var colorePalla = "red";
+
+            function cambiaColore() {
+                colorePalla = "blue";
+            }
+
+            console.log(colorePalla);
+        </script>
+    </div>
+</body>
+
+</html>
