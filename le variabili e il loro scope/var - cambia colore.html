@@ -35,23 +35,28 @@
 <body>
     <div class="container">
         <h1>Utilizzo di var</h1>
-        <p>Di che colore è la palla ?</p>
+        <h2>Cambia colore</p>
+            <p>Di che colore è la palla ?</p>
 
-        <div class="campo">
-            <div class="palla">
+            <div class="campo">
+                <div class="palla">
 
+                </div>
             </div>
-        </div>
 
-        <script>
-            var colorePalla = "red";
+            <script>
+                var colorePalla = "red";
 
-            function cambiaColore() {
-                colorePalla = "blue";
-            }
+                function cambiaColore() {
+                    colorePalla = "blue";
+                    console.log("cambio il colore.");
+                }
 
-            console.log(colorePalla);
-        </script>
+                // provo lo script
+                console.log("il colore della palla è", colorePalla);
+                cambiaColore();
+                console.log("il colore della palla è", colorePalla);
+            </script>
     </div>
 </body>
 
